@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Monitoreo de Gases</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+<link href='/css/bootstrap.min.css' media='screen' rel='stylesheet' type='text/css'>
+<link href='/css/bootstrap-responsive.min.css' media='screen' rel='stylesheet' type='text/css'>
+
+
+  <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+
+    </style>
+
+    </head>
+    <body>
+
+<!-- NAVBAR START -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/index.html">CCyS</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/aqm">Monitoreo de gases</a></li>
+              <li><a href="/dusttrak">Particulado PM10</a></li>
+              <li><a href="http://ccys.siafa.com.ar/manuales">Manuales</a></li>
+              <li><a href="http://ccys.siafa.com.ar/software">Software</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+<!-- NAVBAR START -->
+
+
+
+<!-- CONTAINER START -->
+    <div class="container white">
+
+
+          <div class="row">
+<div class="span8"><h3>Monitoreo de Gases</h3>
+</div>
+</div>
+
+
+<form action='/aqm' class='form-inline' method='get'>
+<select placeholder="Equipo" name="equipo_id">
+<option value="1">SRVSIAFA-</option>
+<option value="2">AQM120716</option>
+<option value="3">AQM120715</option>
+<option value="4">AQM120s817</option>
+</select>
+<input class="datepicker" placeholder="Desde" name="desde" type="text" />
+<input class="datepicker" placeholder="Hasta" name="hasta" type="text" />
+<input class="btn btn-primary" value="Filtrar" type="submit" />
+</form>
+<div class="pagination"><ul><li class="prev disabled"><span>&#8592; Previous</span></li> <li class="active"><span>1</span></li> <li><a rel="next" href="/aqm/?page=2">2</a></li> <li><a 
+href="/aqm/?page=3">3</a></li> <li><a href="/aqm/?page=4">4</a></li> <li><a href="/aqm/?page=5">5</a></li> <li><a href="/aqm/?page=6">6</a></li> <li><a href="/aqm/?page=7">7</a></li> 
+<li><a href="/aqm/?page=8">8</a></li> <li><a href="/aqm/?page=9">9</a></li> <li class="disabled"><a href="#">&hellip;</a></li> <li><a href="/aqm/?page=588">588</a></li> <li><a 
+href="/aqm/?page=589">589</a></li> <li class="next"><a rel="next" href="/aqm/?page=2">Next &#8594;</a></li></ul></div>
+<table class='table table-striped table-hover table-condensed' id='list'>
+<thead>
+<tr>
+<th class='header'>Id</th>
+<th class='header'>S/N</th>
+<th class='header'>Fecha</th>
+<th class='header'>Latitud</th>
+<th class='header'>Longitud</th>
+<th class='header'>Temp C°</th>
+<th class='header'>Hum %</th>
+<th class='header'>CO µg/m3</th>
+<th class='header'>SO2 µg/m</th>
+<th class='header'>VOCs ppm</th>
+<th class='header'>Observaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class='list-row'>
+<td class='list-column'>17651</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:56:30-03:00</td>
+<td class='list-column'>S 32 45.1084</td>
+<td class='list-column'>W 060 44.3482</td>
+<td class='list-column'>25.7</td>
+<td class='list-column'>62.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.0</td>
+<td class='list-column'>0.044</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17650</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:51:29-03:00</td>
+<td class='list-column'>S 32 45.1050</td>
+<td class='list-column'>W 060 44.3488</td>
+<td class='list-column'>25.5</td>
+<td class='list-column'>63.0</td>
+<td class='list-column'>0.02</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.042</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17649</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:46:28-03:00</td>
+<td class='list-column'>S 32 45.1002</td>
+<td class='list-column'>W 060 44.3521</td>
+<td class='list-column'>26.0</td>
+<td class='list-column'>64.0</td>
+<td class='list-column'>0.04</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.026</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17648</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:41:27-03:00</td>
+<td class='list-column'>S 32 45.1027</td>
+<td class='list-column'>W 060 44.3623</td>
+<td class='list-column'>25.5</td>
+<td class='list-column'>64.0</td>
+<td class='list-column'>0.04</td>
+<td class='list-column'>0.0</td>
+<td class='list-column'>0.084</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17647</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:36:26-03:00</td>
+<td class='list-column'>S 32 45.1079</td>
+<td class='list-column'>W 060 44.3534</td>
+<td class='list-column'>26.4</td>
+<td class='list-column'>64.0</td>
+<td class='list-column'>0.03</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.036</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17646</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:31:25-03:00</td>
+<td class='list-column'>S 32 45.1077</td>
+<td class='list-column'>W 060 44.3537</td>
+<td class='list-column'>25.6</td>
+<td class='list-column'>65.0</td>
+<td class='list-column'>0.05</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.087</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17645</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:26:24-03:00</td>
+<td class='list-column'>S 32 45.1065</td>
+<td class='list-column'>W 060 44.3561</td>
+<td class='list-column'>23.9</td>
+<td class='list-column'>66.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.02</td>
+<td class='list-column'>0.038</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17644</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:21:23-03:00</td>
+<td class='list-column'>S 32 45.1091</td>
+<td class='list-column'>W 060 44.3473</td>
+<td class='list-column'>24.0</td>
+<td class='list-column'>65.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.051</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17643</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:16:22-03:00</td>
+<td class='list-column'>S 32 45.1100</td>
+<td class='list-column'>W 060 44.3382</td>
+<td class='list-column'>26.1</td>
+<td class='list-column'>66.0</td>
+<td class='list-column'>0.03</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.049</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17642</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:11:21-03:00</td>
+<td class='list-column'>S 32 45.1022</td>
+<td class='list-column'>W 060 44.3452</td>
+<td class='list-column'>25.3</td>
+<td class='list-column'>68.0</td>
+<td class='list-column'>0.04</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.072</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17641</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:06:20-03:00</td>
+<td class='list-column'>S 32 45.1039</td>
+<td class='list-column'>W 060 44.3436</td>
+<td class='list-column'>24.5</td>
+<td class='list-column'>70.0</td>
+<td class='list-column'>0.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.018</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17652</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T09:01:19-03:00</td>
+<td class='list-column'>S 32 45.1028</td>
+<td class='list-column'>W 060 44.3577</td>
+<td class='list-column'>24.3</td>
+<td class='list-column'>70.0</td>
+<td class='list-column'>0.02</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.034</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17639</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:56:18-03:00</td>
+<td class='list-column'>S 32 45.1097</td>
+<td class='list-column'>W 060 44.3500</td>
+<td class='list-column'>24.4</td>
+<td class='list-column'>71.0</td>
+<td class='list-column'>0.02</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.041</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17638</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:51:17-03:00</td>
+<td class='list-column'>S 32 45.1108</td>
+<td class='list-column'>W 060 44.3478</td>
+<td class='list-column'>24.7</td>
+<td class='list-column'>71.0</td>
+<td class='list-column'>0.03</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.039</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17637</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:46:16-03:00</td>
+<td class='list-column'>S 32 45.1096</td>
+<td class='list-column'>W 060 44.3492</td>
+<td class='list-column'>23.3</td>
+<td class='list-column'>71.0</td>
+<td class='list-column'>0.04</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.044</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17636</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:41:15-03:00</td>
+<td class='list-column'>S 32 45.1122</td>
+<td class='list-column'>W 060 44.3465</td>
+<td class='list-column'>19.9</td>
+<td class='list-column'>72.0</td>
+<td class='list-column'>0.02</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.061</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17635</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:36:14-03:00</td>
+<td class='list-column'>S 32 45.1131</td>
+<td class='list-column'>W 060 44.3443</td>
+<td class='list-column'>24.5</td>
+<td class='list-column'>71.0</td>
+<td class='list-column'>0.0</td>
+<td class='list-column'>0.0</td>
+<td class='list-column'>0.016</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17634</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:31:13-03:00</td>
+<td class='list-column'>S 32 45.1070</td>
+<td class='list-column'>W 060 44.3456</td>
+<td class='list-column'>24.3</td>
+<td class='list-column'>71.0</td>
+<td class='list-column'>0.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.051</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17633</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:26:12-03:00</td>
+<td class='list-column'>S 32 45.1062</td>
+<td class='list-column'>W 060 44.3423</td>
+<td class='list-column'>23.5</td>
+<td class='list-column'>71.0</td>
+<td class='list-column'>0.03</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.027</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17632</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:21:11-03:00</td>
+<td class='list-column'>S 32 45.1098</td>
+<td class='list-column'>W 060 44.3430</td>
+<td class='list-column'>22.3</td>
+<td class='list-column'>72.0</td>
+<td class='list-column'>0.03</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.041</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17631</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:16:10-03:00</td>
+<td class='list-column'>S 32 45.1150</td>
+<td class='list-column'>W 060 44.3386</td>
+<td class='list-column'>24.0</td>
+<td class='list-column'>74.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.026</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17630</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:11:09-03:00</td>
+<td class='list-column'>S 32 45.1112</td>
+<td class='list-column'>W 060 44.3470</td>
+<td class='list-column'>21.7</td>
+<td class='list-column'>74.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.02</td>
+<td class='list-column'>0.041</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17629</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:06:08-03:00</td>
+<td class='list-column'>S 32 45.1096</td>
+<td class='list-column'>W 060 44.3506</td>
+<td class='list-column'>22.4</td>
+<td class='list-column'>74.0</td>
+<td class='list-column'>0.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.019</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17640</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T08:01:07-03:00</td>
+<td class='list-column'>S 32 45.1115</td>
+<td class='list-column'>W 060 44.3528</td>
+<td class='list-column'>23.9</td>
+<td class='list-column'>74.0</td>
+<td class='list-column'>0.03</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.062</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17627</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T07:56:06-03:00</td>
+<td class='list-column'>S 32 45.1168</td>
+<td class='list-column'>W 060 44.3494</td>
+<td class='list-column'>23.2</td>
+<td class='list-column'>75.0</td>
+<td class='list-column'>0.02</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.047</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17626</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T07:51:05-03:00</td>
+<td class='list-column'>S 32 45.1077</td>
+<td class='list-column'>W 060 44.3544</td>
+<td class='list-column'>22.8</td>
+<td class='list-column'>75.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.018</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17625</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T07:46:04-03:00</td>
+<td class='list-column'>S 32 45.1052</td>
+<td class='list-column'>W 060 44.3554</td>
+<td class='list-column'>23.2</td>
+<td class='list-column'>76.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.06</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17624</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T07:41:03-03:00</td>
+<td class='list-column'>S 32 45.1076</td>
+<td class='list-column'>W 060 44.3496</td>
+<td class='list-column'>22.8</td>
+<td class='list-column'>76.0</td>
+<td class='list-column'>0.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.04</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17623</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T07:36:02-03:00</td>
+<td class='list-column'>S 32 45.1079</td>
+<td class='list-column'>W 060 44.3496</td>
+<td class='list-column'>23.0</td>
+<td class='list-column'>76.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.059</td>
+<td class='list-column'></td>
+</tr>
+<tr class='list-row'>
+<td class='list-column'>17622</td>
+<td class='list-column'>AQM120817</td>
+<td class='list-column'>2014-01-06T07:31:01-03:00</td>
+<td class='list-column'>S 32 45.1077</td>
+<td class='list-column'>W 060 44.3495</td>
+<td class='list-column'>23.0</td>
+<td class='list-column'>77.0</td>
+<td class='list-column'>0.0</td>
+<td class='list-column'>0.01</td>
+<td class='list-column'>0.014</td>
+<td class='list-column'></td>
+</tr>
+</tbody>
+</table>
+<div class="pagination"><ul><li class="prev disabled"><span>&#8592; Previous</span></li> <li class="active"><span>1</span></li> <li><a rel="next" href="/aqm/?page=2">2</a></li> <li><a 
+href="/aqm/?page=3">3</a></li> <li><a href="/aqm/?page=4">4</a></li> <li><a href="/aqm/?page=5">5</a></li> <li><a href="/aqm/?page=6">6</a></li> <li><a href="/aqm/?page=7">7</a></li> 
+<li><a href="/aqm/?page=8">8</a></li> <li><a href="/aqm/?page=9">9</a></li> <li class="disabled"><a href="#">&hellip;</a></li> <li><a href="/aqm/?page=588">588</a></li> <li><a 
+href="/aqm/?page=589">589</a></li> <li class="next"><a rel="next" href="/aqm/?page=2">Next &#8594;</a></li></ul></div>
+
+
+
+<hr>
+
+      <footer>
+        <p>&copy; SIAFA SRL</p>
+      </footer>
+</div> <!-- CONTAINER END -->
+
+    </body>
+</html>
